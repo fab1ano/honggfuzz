@@ -539,9 +539,9 @@ static void arch_traceSaveData(run_t* run, pid_t pid) {
 
     uint64_t crashAddr = (uint64_t)(uintptr_t)si.si_addr;
     /* User-induced signals don't set si.si_addr */
-    if (SI_FROMUSER(&si)) {
+    /*if (SI_FROMUSER(&si)) {
         crashAddr = 0UL;
-    }
+    }*/
 
     uint64_t pc         = 0;
     uint64_t status_reg = 0;
